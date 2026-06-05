@@ -47,6 +47,9 @@ const App = () => {
           <StudentDashboard token={token} />
         )}
       </main>
+      <footer className="app-footer">
+        <p>Inspirante College Portal &copy; 2026</p>
+      </footer>
     </div>
   );
 };
