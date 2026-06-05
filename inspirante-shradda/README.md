@@ -4,7 +4,7 @@ A full-stack College Event Registration Portal built for the Inspirante Web Deve
 
 ## Tech Stack
 
-- **Frontend:** React 19 (Vite), custom CSS — no UI frameworks
+- **Frontend:** React 19 (Vite), custom CSS — no external UI frameworks used
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB (Mongoose)
 - **Auth:** JSON Web Tokens (JWT)
@@ -79,14 +79,14 @@ Frontend runs on **http://localhost:5173** by default.
 
 All routes are prefixed with `/api/`:
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
-| POST | `/api/auth/login` | None | Login |
-| GET | `/api/events` | Required | List all events |
-| POST | `/api/events` | Admin | Create event |
-| GET | `/api/events/:id/registrations` | Admin | View registrations for event |
-| POST | `/api/registrations` | Student | Register for event |
-| GET | `/api/registrations/me` | Student | My registrations |
+| Method | Route                           | Auth     | Description                  |
+| ------ | ------------------------------- | -------- | ---------------------------- |
+| POST   | `/api/auth/login`               | None     | Login                        |
+| GET    | `/api/events`                   | Required | List all events              |
+| POST   | `/api/events`                   | Admin    | Create event                 |
+| GET    | `/api/events/:id/registrations` | Admin    | View registrations for event |
+| POST   | `/api/registrations`            | Student  | Register for event           |
+| GET    | `/api/registrations/me`         | Student  | My registrations             |
 
 ## Known Issues / Limitations
 
