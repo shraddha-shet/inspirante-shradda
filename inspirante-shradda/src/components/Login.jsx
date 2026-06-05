@@ -24,7 +24,7 @@ const Login = ({ onLogin }) => {
         setErrorMsg(data.error || "Login failed");
       }
     } catch (error) {
-      setErrorMsg("Network error. Please check your connection and try again.");
+      setErrorMsg("Unable to connect. Please make sure the server is running.");
     }
   };
 
