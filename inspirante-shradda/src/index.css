@@ -1,0 +1,264 @@
+/* Core Resets & Variables */
+:root {
+  --primary: #2b6cb0;
+  --primary-hover: #2c5282;
+  --bg-color: #f7fafc;
+  --card-bg: #ffffff;
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
+
+  --green-bg: #f0fff4;
+  --green-text: #22543d;
+  --amber-bg: #fffaf0;
+  --amber-text: #9c4221;
+  --red-bg: #fff5f5;
+  --red-text: #9b2c2c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Layout */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.login-card {
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.horizontal-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.horizontal-form input {
+  flex: 1;
+}
+.horizontal-form input {
+  flex: 1;
+}
+
+.horizontal-form button {
+  width: auto;
+  white-space: nowrap;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-logout {
+  background-color: var(--text-muted);
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+  background-color: var(--text-main);
+}
+
+.btn-disabled {
+  background-color: #cbd5e0;
+  color: #718096;
+  cursor: not-allowed;
+}
+
+/* Alerts */
+.alert {
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.alert-error {
+  background-color: var(--red-bg);
+  color: var(--red-text);
+  border: 1px solid #feb2b2;
+}
+
+.alert-success {
+  background-color: var(--green-bg);
+  color: var(--green-text);
+  border: 1px solid #9ae6b4;
+}
+
+/* Lists & Tables */
+.event-list {
+  list-style: none;
+}
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: transform 0.1s;
+}
+
+.event-item:hover {
+  background-color: #f8fafc;
+  cursor: pointer;
+}
+
+.student-event-item:hover {
+  cursor: default;
+}
+
+.student-event-item button {
+  width: auto;
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: var(--bg-color);
+}
+
+/* Admin Dynamic Capacity Colors */
+.event-capacity {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.capacity-green {
+  background-color: var(--green-bg);
+  color: var(--green-text);
+}
+
+.capacity-amber {
+  background-color: var(--amber-bg);
+  color: var(--amber-text);
+}
+
+.capacity-red {
+  background-color: var(--red-bg);
+  color: var(--red-text);
+}
+
+/* Tags */
+.tag-full {
+  background-color: var(--red-text);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  margin-left: 10px;
+  vertical-align: middle;
+}
